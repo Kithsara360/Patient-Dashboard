@@ -12,7 +12,7 @@ export default function Sidebar() {
     <aside className="w-64 border-r bg-white">
       <div className="p-6">
         <h1 className="text-xl font-bold">
-          Patient Dashboard
+          Patient Info Dashboard
         </h1>
       </div>
 
@@ -40,7 +40,7 @@ export default function Sidebar() {
             pathname.startsWith("/patients")
                 ? "bg-blue-100 text-blue-600"
                 : "hover:bg-gray-100"
-)}
+        )}
         >
           <Users size={18} />
           Patients
