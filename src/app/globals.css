@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
+:root {   /*default colours for light mode*/
+  --background: #f8fafc;
   --foreground: #171717;
 }
 
@@ -12,10 +12,10 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {         /*when the system colour changes to dark mode, the root variables will be updated to the dark mode values */
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #f8fafc;
+    --foreground: #171717;
   }
 }
 

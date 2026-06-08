@@ -20,10 +20,10 @@ import { Patient } from "@/types/patient";
 export const patients = [
   {
     id: "1",
-    patientId: "PAT-001",
+    patientId: "Patient1",
     name: "John Silva",
     age: 45,
-    phone: "0771234567",
+    phone: "0777777777",
     ward: "Ward A",
     attendingDoctor: "Dr. Fernando",
     medicalHistory: "Diabetes",
@@ -31,10 +31,10 @@ export const patients = [
 
   {
     id: "2",
-    patientId: "PAT-002",
+    patientId: "Patient2",
     name: "Jane Perera",
     age: 32,
-    phone: "0719876543",
+    phone: "0711111111",
     ward: "Ward B",
     attendingDoctor: "Dr. Peris",
     medicalHistory: "Asthma",
@@ -42,12 +42,12 @@ export const patients = [
 
   {
     id: "3",
-    patientId: "PAT-003",
+    patientId: "Patient3",
     name: "Kasun Jayasinghe",
-    age: 55,
-    phone: "0701112233",
+    age: 71,
+    phone: "0700000000",
     ward: "Ward C",
     attendingDoctor: "Dr. Silva",
-    medicalHistory: "Hypertension",
+    medicalHistory: "Parkinson",
   },
 ];
