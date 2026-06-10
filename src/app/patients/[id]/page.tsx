@@ -29,7 +29,7 @@ export default async function PatientDetailsPage({
   <div className="space-y-6 p-6">
 
     <div className="flex items-start justify-between">
-      {/* Left side: patient identity */}
+      {/* Patient name and ID displayed at the left side of the page */}
       <div>
         <h1 className="text-3xl font-bold">
           {patient.name}
@@ -43,9 +43,9 @@ export default async function PatientDetailsPage({
       {/* Edit button to the right side of the patient's full details page*/}
       <Link
         href={`/patients/${patient.id}/edit`}
-        className="rounded-md bg-black px-4 py-2 text-white hover:bg-gray-800"
+        className="inline-flex items-center gap-2 rounded-md bg-blue-600 px-4 py-2 text-white hover:bg-blue-700"
       >
-        Edit Patient
+        Edit Patient details
       </Link>
     </div>
 

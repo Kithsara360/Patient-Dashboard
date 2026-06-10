@@ -1,10 +1,13 @@
 //patient listing
+"use client";
 
 import DashboardLayout from "@/components/layout/DashboardLayout";
 import PatientCard from "@/components/patients/PatientCard";
-import { patients } from "@/data/patients";
+import { usePatients } from "@/context/PatientContext";
 
 export default function PatientsPage() {
+  const { patients } = usePatients();
+
   return (
     <DashboardLayout>
       <div>
