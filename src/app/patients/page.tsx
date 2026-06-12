@@ -4,9 +4,11 @@
 import DashboardLayout from "@/components/layout/DashboardLayout";
 import PatientCard from "@/components/patients/PatientCard";
 import { usePatients } from "@/context/PatientContext";
+import Link from "next/link";
 
 export default function PatientsPage() {
   const { patients } = usePatients();
+  console.log(patients);  //to test if its getting data from context. should display details in console
 
   return (
     <DashboardLayout>

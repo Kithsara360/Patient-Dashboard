@@ -1,21 +1,23 @@
+"use client";
+
 import DashboardLayout from "@/components/layout/DashboardLayout";
-import { patients } from "@/data/patients";
+// import { patients } from "@/data/patients";  dont need static data now.. will get from context
 import Link from "next/link";
+import {usePatients} from "@/context/PatientContext";  
+import {useParams} from "next/navigation";
 
-interface PageProps {
-  params: Promise<{
-    id: string;
-  }>;
-}
+export default function PatientDetailsPage() {
 
-export default async function PatientDetailsPage({
-  params,
-}: PageProps) {
-  const { id } = await params;
+  // get patient id from url params and fetch patient details from context using id
+  const params = useParams();
+  const id = params.id as string;
 
-  const patient = patients.find(
-    (p) => p.id === id
-  );
+  const {patients} = usePatients();
+
+  const patient =
+    patients.find(
+      (p) => p.id === id
+    );
 
   if (!patient) {
     return (
@@ -26,7 +28,8 @@ export default async function PatientDetailsPage({
   }
 
   return (
-  <div className="space-y-6 p-6">
+    <DashboardLayout>
+      <div className="space-y-6 p-6">
 
     <div className="flex items-start justify-between">
       {/* Patient name and ID displayed at the left side of the page */}
@@ -100,5 +103,7 @@ export default async function PatientDetailsPage({
 
     </div>
   </div>
+  
+  </DashboardLayout>
   );
 }
