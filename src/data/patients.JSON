@@ -1,0 +1,54 @@
+[
+  {
+    "id": "1",
+    "name": "John Silva",
+    "patientId": "PAT001",
+    "age": 45,
+    "phone": "0771234569",
+    "ward": "A1",
+    "attendingDoctor": "Dr. Fernando",
+    "medicalHistory": "Hypertension",
+    "bloodGroup": "O+",
+    "hemoglobin": "14.2",
+    "whiteBloodCells": "7000"
+  },
+  {
+    "id": "901559d4-aaf2-49ff-8b2c-22c6c8eaf2e9",
+    "name": "Akash",
+    "patientId": "2",
+    "age": 26,
+    "phone": "0722222222",
+    "ward": "A",
+    "attendingDoctor": "Dr. Suresh",
+    "medicalHistory": "Diabetes",
+    "bloodGroup": "B positive",
+    "hemoglobin": "200",
+    "whiteBloodCells": "7500"
+  },
+  {
+    "id": "7047a3fc-9763-4991-b92a-b42ff337865c",
+    "name": "Geenath",
+    "patientId": "3",
+    "age": 34,
+    "phone": "0713333333",
+    "ward": "D",
+    "attendingDoctor": "Dr. Banu",
+    "medicalHistory": "Cholesterol",
+    "bloodGroup": "O positive",
+    "hemoglobin": "50",
+    "whiteBloodCells": "6500"
+  },
+  {
+    "id": "91884a7c-dca6-4123-825a-32b86f5a0d90",
+    "name": "Mosh",
+    "patientId": "4",
+    "age": 16,
+    "phone": "0710000000",
+    "ward": "B",
+    "attendingDoctor": "Dr. Brian",
+    "medicalHistory": "Headache",
+    "bloodGroup": "AB positive",
+    "hemoglobin": "56",
+    "whiteBloodCells": "6900"
+  }
+]
