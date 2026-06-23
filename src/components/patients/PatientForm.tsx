@@ -7,12 +7,11 @@ import { Patient } from "@/types/patient"; //to validate patient object types to
 interface PatientFormProps {
   initialData?: Patient;
 
-  onSubmit: (
-    patient: Patient
-  ) => void;
+  //when submitting, sends patient object to AddPatientForm or EditPatientForm, depending on which calls this form
+  onSubmit: (patient: Patient) => void;   
 }
 //create component for form for both add and edit..
-export default function PatientForm({
+export default function PatientForm({   //is used to render the form from add or edit PatientForm
   initialData,
   onSubmit,
 }: PatientFormProps) {
@@ -27,7 +26,7 @@ const [patientId, setPatientId] =
 
 const [age, setAge] =
   useState(
-    initialData?.age || 0
+    initialData?.age || 1
   );
 
 const [phone, setPhone] =
@@ -35,8 +34,6 @@ const [phone, setPhone] =
     initialData?.phone || ""
   );
 
-
-  // continue for remaining fields like doctor, ward etc.
   const [ward, setWard] =
   useState(
     initialData?.ward || ""
@@ -104,10 +101,8 @@ const [whiteBloodCells, setWhiteBloodCells] =
   </label>
 
   <input
-    value={name}
-    onChange={(e) =>
-      setName(e.target.value)   //updates state
-    }
+    value={name}  //displays curent state
+    onChange={(e) => setName(e.target.value)}   //gets the typed text and updates (SetName)
     className="w-full rounded border p-2"
   />
 </div>

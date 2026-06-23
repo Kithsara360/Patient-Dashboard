@@ -1,6 +1,6 @@
 import Link from "next/link";
 import DashboardLayout from "@/components/layout/DashboardLayout";
-import PatientCard from "@/components/patients/PatientCard";
+import PatientList from "@/components/patients/PatientList";
 import { getPatients } from "@/lib/patient-service";
 
 // No "use client" here — this runs on the server, every time the page is requested.
@@ -13,11 +13,13 @@ export default function PatientsPage() {
         <h1 className="text-3xl font-bold">Patients</h1>
       </div>
 
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+      <PatientList patients={patients} />
+
+      {/* <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         {patients.map((patient) => (
           <PatientCard key={patient.id} patient={patient} />
         ))}
-      </div>
+      </div> */}
     </DashboardLayout>
   );
 }

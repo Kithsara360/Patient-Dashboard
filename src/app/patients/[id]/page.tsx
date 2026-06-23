@@ -8,7 +8,7 @@ interface PageProps {
 
 export default async function PatientDetailsPage({ params }: PageProps) {
   const { id } = await params;
-  const patient = getPatientById(id);
+  const patient = getPatientById(id); //Async function- params type becomes Promise (id: string), and await it before destructuring
 
   if (!patient) {
     return (

@@ -40,7 +40,7 @@
   },
   {
     "id": "91884a7c-dca6-4123-825a-32b86f5a0d90",
-    "name": "Mosh",
+    "name": "Adrian",
     "patientId": "4",
     "age": 16,
     "phone": "0710000000",
@@ -50,5 +50,18 @@
     "bloodGroup": "AB positive",
     "hemoglobin": "56",
     "whiteBloodCells": "6900"
+  },
+  {
+    "id": "e5f63610-62f3-4d8a-af5b-9d0eb00636be",
+    "name": "aa",
+    "patientId": "a",
+    "age": 12,
+    "phone": "22222",
+    "ward": "1",
+    "attendingDoctor": "2",
+    "medicalHistory": "2",
+    "bloodGroup": "2",
+    "hemoglobin": "2",
+    "whiteBloodCells": "2"
   }
 ]
