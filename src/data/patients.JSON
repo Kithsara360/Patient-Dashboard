@@ -5,7 +5,7 @@
     "patientId": "PAT001",
     "age": 45,
     "phone": "0771234569",
-    "ward": "A1",
+    "ward": "A",
     "attendingDoctor": "Dr. Fernando",
     "medicalHistory": "Hypertension",
     "bloodGroup": "O+",
@@ -13,8 +13,8 @@
     "whiteBloodCells": "7000"
   },
   {
-    "id": "901559d4-aaf2-49ff-8b2c-22c6c8eaf2e9",
-    "name": "Akash",
+    "id": "2",
+    "name": "Akash Rathnayake",
     "patientId": "2",
     "age": 26,
     "phone": "0722222222",
@@ -31,7 +31,7 @@
     "patientId": "3",
     "age": 34,
     "phone": "0713333333",
-    "ward": "D",
+    "ward": "B",
     "attendingDoctor": "Dr. Banu",
     "medicalHistory": "Cholesterol",
     "bloodGroup": "O positive",
@@ -50,18 +50,5 @@
     "bloodGroup": "AB positive",
     "hemoglobin": "56",
     "whiteBloodCells": "6900"
-  },
-  {
-    "id": "e5f63610-62f3-4d8a-af5b-9d0eb00636be",
-    "name": "aa",
-    "patientId": "a",
-    "age": 12,
-    "phone": "22222",
-    "ward": "1",
-    "attendingDoctor": "2",
-    "medicalHistory": "2",
-    "bloodGroup": "2",
-    "hemoglobin": "2",
-    "whiteBloodCells": "2"
   }
 ]
