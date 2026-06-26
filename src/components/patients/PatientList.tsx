@@ -17,17 +17,16 @@ export default function PatientList({ patients }: PatientListProps) {
   const [wardFilter, setWardFilter] = useState("all");
   const [doctorFilter, setDoctorFilter] = useState("all");
 
-  // --- DERIVED DATA (not state) ---
-  // Build unique ward options from the patient list for the dropdown
-  const wards = ["all", ...Array.from(new Set(patients.map((p) => p.ward)))];
+  // Builds unique ward options from the patient list for the filter dropdown
+  const wards = ["all", ...Array.from(new Set(patients.map((p) => p.ward)))];   //gets non duplicate wards to a set - then array
 
-  // Build unique doctor options the same way
+  // Build unique doctor options filter dropdown the same way
   const doctors = ["all", ...Array.from(new Set(patients.map((p) => p.attendingDoctor)))];
 
-  // --- FILTERING LOGIC ---
+  // Filtering logic
   // This runs every render — no useEffect needed, it's just a calculation
-  const filtered = patients.filter((patient) => {
-    // search matches if ANY of these fields contain the search term (case-insensitive)
+  const filtered = patients.filter((patient) => {   // .filter() loops through every patient and returns a new array containing only patients where the callback returns "true"
+    // search matches if any of these fields contain the searched term
     const matchesSearch =
       search === "" || // if search is empty, everything passes
       patient.name.toLowerCase().includes(search.toLowerCase()) ||
@@ -57,7 +56,7 @@ export default function PatientList({ patients }: PatientListProps) {
           type="text"
           placeholder="Search by name, ID, ward, doctor..."
           value={search}
-          onChange={(e) => setSearch(e.target.value)}
+          onChange={(e) => setSearch(e.target.value)}   //onChange runs when user types     //setSearch updates state
           className="flex-1 rounded border px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
 
@@ -115,7 +114,7 @@ export default function PatientList({ patients }: PatientListProps) {
       ) : (
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
           {filtered.map((patient) => (
-            <PatientCard key={patient.id} patient={patient} />
+            <PatientCard key={patient.id} patient={patient} /> 
           ))}
         </div>
       )}
