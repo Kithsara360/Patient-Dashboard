@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useNotification } from "@/components/NotificationContext";
 import { Patient } from "@/types/patient";
 import PatientCard from "@/components/patients/PatientCard";
 
@@ -9,6 +10,7 @@ interface PatientListProps {
 }
 
 export default function PatientList({ patients }: PatientListProps) {
+  const { showNotification } = useNotification();
 
   // search term state — updates on every keystroke
   const [search, setSearch] = useState("");
@@ -93,6 +95,7 @@ export default function PatientList({ patients }: PatientListProps) {
               setSearch("");
               setWardFilter("all");
               setDoctorFilter("all");
+              showNotification("Filters cleared", "success");  //showNotification from NotificationContext
             }}
             className="rounded border px-3 py-2 text-sm text-red-500 hover:bg-red-50"
           >
